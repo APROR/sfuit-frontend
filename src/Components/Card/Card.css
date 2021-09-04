@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.total{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 65vh;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    padding: 40px 0;
+}
+
+.container .card{
+    position: relative;
+    min-width: 320px;
+    height: 300px;
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.05),
+                inset -5px -5px 5px rgba(255, 255, 255, 0.5),
+                5px 5px 5px rgba(0, 0, 0, 0.05),
+                -5px -5px 5px rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    margin: 30px;
+}
+
+.container .card .box{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background: #ebf5fc;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.container .card:hover .box{
+    transform: translateY(-50px);    
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    background: #141641;
+}
+
+.container .card .box .content{
+    padding: 20px;
+    text-align: center;
+}
+
+.container .card .box .content .back{
+    position: absolute;
+    top: -10px;
+    right: 30px;
+    font-size: 8em;
+    color: rgba(0, 0, 0, 0.1);
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.container .card:hover .box .content .back{
+    color: rgba(255, 255, 255, 0.1);
+}
+
+.container .card .box .content .title{
+    font-size: 2.2em;
+    color: #777;
+    z-index: 1;
+    transition: 0.5s;
+    margin-top: -60px;
+}
+
+.container .card .box .content .value{
+    font-size: 2em;
+    font-weight: 300;
+    color: #777;
+    z-index: 1;
+    transition: 0.5s;
+    margin-top: 60px;
+}
+
+.container .card:hover .box .content .title,
+.container .card:hover .box .content .value{
+    color: #fff;
+}
